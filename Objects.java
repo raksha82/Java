@@ -16,5 +16,9 @@ public static void main (String[] args)
    Shop p=new Shop();
    p.name="Raksha";
    p.hello();
+
+   Shop q=new Shop();
+   q.name="Ranjan";
+   q.hello();
 }
 }
