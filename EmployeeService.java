@@ -5,7 +5,7 @@ import java.util.*;
 class EmployeeService
 {
 
-ArrayList<EmployeeManagementSystem> a = new ArrayList<>();
+static ArrayList<EmployeeManagementSystem> a = new ArrayList<>();
 
 public static void addEmployee(EmployeeManagementSystem employee)
 {
