@@ -5,11 +5,12 @@ import java.util.*;
 class EmployeeService
 {
 
-static ArrayList<EmployeeManagementSystem> a = new ArrayList<>();
 
-public static void addEmployee(EmployeeManagementSystem employee)
+ArrayList list = new ArrayList();
+
+public  void addEmployee(EmployeeManagementSystem employee)
 {
-   a.add(employee);
+   list.add(employee);
    System.out.println("New employee Added");
    System.out.println(Arrays.toString(a.toArray()));
 }
@@ -21,8 +22,8 @@ public static void main (String[] args)
 
  EmployeeManagementSystem emp = new EmployeeManagementSystem(1 , "Raksha" , 15000 , "Tester");
  
- EmployeeService.addEmployee(emp);
-
+ EmployeeService e=new EmployeeService();
+ e.addEmployee(emp);
 }
 
 }
