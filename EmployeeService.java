@@ -6,12 +6,29 @@ class EmployeeService
 {
 
 
-ArrayList list = new ArrayList();
+ArrayList<EmployeeManagementSystem>  list = new ArrayList<>();
 
 public  void addEmployee(EmployeeManagementSystem employee)
 {
+
    list.add(employee);
    System.out.println("New employee Added");
+}
+
+public void deleteEmployee(int id)
+{
+   for(int i=0;i<list.size();i++)
+   {
+      if(list.get(i).getId()==id) 
+      {
+         list.remove(i);
+         System.out.println("Removed");
+         return;
+      }
+   }
+
+   System.out.println("Not Found");
+ 
 }
 
 public void getEmployee()
@@ -32,6 +49,8 @@ public static void main (String[] args)
  EmployeeService e=new EmployeeService();
  e.addEmployee(emp1);
  e.addEmployee(emp2);
+ e.getEmployee();
+ e.deleteEmployee(1);
  e.getEmployee();
 }
 
