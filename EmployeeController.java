@@ -7,24 +7,23 @@ public class EmployeeController
 public static void main(String[] args)
 {
 
-    File file = new File("/home/vijay/Documents/prp6/html_css/java-project/ems");
+       File file = new File("D:/Java Full Stack Payilagam/Java");
 
-       String[] files =  file.list();
+       String[] files =  file.list((dir, name) -> name.endsWith(".java"));
        for(int i=0;i<files.length;i++){
             System.out.println(files[i]);
-        }        
-   
-
-    
-    
-    
+        }    
 
 
+     File dir = new File("D:/Java Full Stack Payilagam/Java");
 
+        File[] folders = dir.listFiles(File::isDirectory);
 
-
-
-
+        if (folders != null) {
+            for (File folder : folders) {
+                System.out.println(folder.getName());
+            }
+        }    
 
 
     EmployeeEntity employee1 = new EmployeeEntity(1,"Rakesh","testing",15000);
